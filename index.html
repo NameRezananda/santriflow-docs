@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SantriFlow - Sistem PPDB Modern</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-bg {
+            background-color: #f0fdf4; /* green-50 */
+        }
+        .primary-green {
+            color: #0f3135; /* green-600 */
+        }
+        .bg-primary-green {
+            background-color: #0f3135; /* green-600 */
+        }
+        .bg-primary-green-hover:hover {
+            background-color: #17474d; /* green-700 */
+        }
+        .section-title {
+            border-left: 4px solid #0f3135;
+            padding-left: 1rem;
+        }
+        [x-cloak] { display: none !important; }
+
+        /* Swiper Customization */
+        .swiper-button-next, .swiper-button-prev {
+            color: #0f3135 !important;
+            transition: transform 0.2s;
+        }
+        .swiper-button-next:hover, .swiper-button-prev:hover {
+            transform: scale(1.1);
+        }
+        .swiper-pagination-bullet-active {
+            background-color: #0f3135 !important;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Header -->
+    <header x-data="{ open: false }" class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold primary-green">
+                SantriFlow
+            </div>
+            <!-- Desktop Nav -->
+            <nav class="space-x-8 hidden md:flex">
+                <a href="#fitur" class="text-slate-600 hover:primary-green transition-colors">Fitur Unggulan</a>
+                <a href="#alur" class="text-slate-600 hover:primary-green transition-colors">Alur Pendaftaran</a>
+                <a href="#teknologi" class="text-slate-600 hover:primary-green transition-colors">Teknologi</a>
+            </nav>
+            <a href="#" class="bg-primary-green text-white font-semibold px-4 py-2 rounded-lg shadow-md bg-primary-green-hover transition-colors hidden md:block">Hubungi Kami</a>
+
+            <!-- Mobile Hamburger Button -->
+            <div class="md:hidden">
+                <button @click="open = !open" class="text-slate-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Nav -->
+        <div x-show="open" x-cloak @click.away="open = false" class="md:hidden bg-white border-t">
+            <a href="#fitur" @click="open = false" class="block px-6 py-3 text-slate-600 hover:bg-slate-100">Fitur Unggulan</a>
+            <a href="#alur" @click="open = false" class="block px-6 py-3 text-slate-600 hover:bg-slate-100">Alur Pendaftaran</a>
+            <a href="#teknologi" @click="open = false" class="block px-6 py-3 text-slate-600 hover:bg-slate-100">Teknologi</a>
+            <div class="px-6 py-4">
+                 <a href="#" class="bg-primary-green text-white font-semibold px-4 py-2 rounded-lg shadow-md bg-primary-green-hover transition-colors w-full block text-center">Hubungi Kami</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero-bg py-20 overflow-hidden">
+            <div class="container mx-auto px-6 text-center">
+                <h1 data-aos="fade-up" class="text-4xl md:text-5xl font-bold text-slate-900 mb-4 leading-tight">
+                    Sistem PPDB Modern untuk Pesantren & Sekolah
+                </h1>
+                <p data-aos="fade-up" data-aos-delay="200" class="text-lg text-slate-600 max-w-3xl mx-auto mb-8">
+                    SantriFlow adalah solusi lengkap untuk digitalisasi proses Penerimaan Peserta Didik Baru (PPDB), mulai dari pendaftaran hingga pengumuman kelulusan, dirancang untuk efisiensi dan kemudahan.
+                </p>
+                <div data-aos="fade-up" data-aos-delay="400" class="max-w-4xl mx-auto">
+                    <!-- Swiper -->
+                    <div class="swiper-container rounded-lg shadow-2xl border-4 border-white bg-slate-200">
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide"><img src="https://placehold.co/1200x650/0f3135/FFF?text=Dashboard+Santri" alt="Screenshot Dasbor Santri" class="w-full h-full object-cover"></div>
+                            <div class="swiper-slide"><img src="https://placehold.co/1200x650/17474d/FFF?text=Halaman+Upload+Dokumen" alt="Screenshot Halaman Upload Dokumen" class="w-full h-full object-cover"></div>
+                            <div class="swiper-slide"><img src="https://placehold.co/1200x650/0f3135/FFF?text=Proses+Pembayaran" alt="Screenshot Halaman Pembayaran" class="w-full h-full object-cover"></div>
+                            <div class="swiper-slide"><img src="https://placehold.co/1200x650/17474d/FFF?text=Panel+Admin" alt="Screenshot Panel Admin" class="w-full h-full object-cover"></div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                        <!-- Add Navigation -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fitur Unggulan -->
+        <section id="fitur" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-2 section-title">Fitur Unggulan</h2>
+                    <p class="text-slate-600 mb-12">Semua yang Anda butuhkan untuk manajemen pendaftaran yang efektif.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <div data-aos="fade-up" data-aos-delay="0" class="bg-slate-50 p-6 rounded-lg border border-slate-200 hover:shadow-lg hover:-translate-y-1 transition-all">
+                        <div class="flex items-center mb-4">
+                            <svg class="w-8 h-8 primary-green mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                            <h3 class="text-xl font-semibold text-slate-800">Pendaftaran Online 24/7</h3>
+                        </div>
+                        <p class="text-slate-600">Calon santri dapat mendaftar kapan saja dan di mana saja, memberikan fleksibilitas maksimal.</p>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-delay="100" class="bg-slate-50 p-6 rounded-lg border border-slate-200 hover:shadow-lg hover:-translate-y-1 transition-all">
+                        <div class="flex items-center mb-4">
+                            <svg class="w-8 h-8 primary-green mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
+                            <h3 class="text-xl font-semibold text-slate-800">Upload Dokumen Digital</h3>
+                        </div>
+                        <p class="text-slate-600">Menggantikan berkas fisik dengan sistem upload yang mudah dan terorganisir.</p>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-delay="200" class="bg-slate-50 p-6 rounded-lg border border-slate-200 hover:shadow-lg hover:-translate-y-1 transition-all">
+                        <div class="flex items-center mb-4">
+                             <svg class="w-8 h-8 primary-green mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+                            <h3 class="text-xl font-semibold text-slate-800">Pembayaran Multi-Metode</h3>
+                        </div>
+                        <p class="text-slate-600">Integrasi dengan payment gateway (Xendit) dan opsi transfer bank manual untuk kemudahan transaksi.</p>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-delay="0" class="bg-slate-50 p-6 rounded-lg border border-slate-200 hover:shadow-lg hover:-translate-y-1 transition-all">
+                        <div class="flex items-center mb-4">
+                           <svg class="w-8 h-8 primary-green mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+                            <h3 class="text-xl font-semibold text-slate-800">Notifikasi WhatsApp Otomatis</h3>
+                        </div>
+                        <p class="text-slate-600">Informasi penting seperti status pembayaran dan kelulusan dikirim langsung ke WhatsApp wali santri.</p>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-delay="100" class="bg-slate-50 p-6 rounded-lg border border-slate-200 hover:shadow-lg hover:-translate-y-1 transition-all">
+                        <div class="flex items-center mb-4">
+                           <svg class="w-8 h-8 primary-green mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            <h3 class="text-xl font-semibold text-slate-800">Dashboard Admin Komprehensif</h3>
+                        </div>
+                        <p class="text-slate-600">Panel admin yang intuitif untuk memantau pendaftar, verifikasi data, dan mengelola kuota.</p>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-delay="200" class="bg-slate-50 p-6 rounded-lg border border-slate-200 hover:shadow-lg hover:-translate-y-1 transition-all">
+                        <div class="flex items-center mb-4">
+                            <svg class="w-8 h-8 primary-green mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            <h3 class="text-xl font-semibold text-slate-800">Paket Pendaftaran Dinamis</h3>
+                        </div>
+                        <p class="text-slate-600">Admin dapat menentukan syarat dokumen dan alur verifikasi yang berbeda untuk setiap paket pendaftaran.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Alur Pendaftaran -->
+        <section id="alur" class="py-20 hero-bg">
+            <div class="container mx-auto px-6">
+                <div data-aos="fade-left">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-2 section-title">Alur Pendaftaran yang Jelas</h2>
+                    <p class="text-slate-600 mb-12 text-center max-w-2xl mx-auto">Dari pembuatan akun hingga pengumuman kelulusan, semua proses terdokumentasi dengan baik dan mudah diikuti oleh calon santri.</p>
+                </div>
+                <div class="relative wrap overflow-hidden p-10 h-full">
+                    <div class="border-2-2 absolute border-opacity-20 border-slate-700 h-full border" style="left: 50%"></div>
+                    <!-- Right Timeline -->
+                    <div class="mb-8 flex justify-between items-center w-full right-timeline" data-aos="fade-right">
+                        <div class="order-1 w-5/12"></div>
+                        <div class="z-20 flex items-center order-1 bg-primary-green shadow-xl w-12 h-12 rounded-full">
+                            <h1 class="mx-auto font-semibold text-lg text-white">1</h1>
+                        </div>
+                        <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
+                            <h3 class="font-bold text-gray-800 text-xl">Buat Akun & Login</h3>
+                            <p class="text-sm leading-snug tracking-wide text-gray-600 text-opacity-100">Calon santri membuat akun dengan email dan No. HP, kemudian login ke dashboard.</p>
+                        </div>
+                    </div>
+                    <!-- Left Timeline -->
+                    <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline" data-aos="fade-left">
+                        <div class="order-1 w-5/12"></div>
+                        <div class="z-20 flex items-center order-1 bg-primary-green shadow-xl w-12 h-12 rounded-full">
+                            <h1 class="mx-auto text-white font-semibold text-lg">2</h1>
+                        </div>
+                        <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
+                            <h3 class="font-bold text-gray-800 text-xl">Isi Biodata & Dokumen</h3>
+                            <p class="text-sm leading-snug tracking-wide text-gray-600 text-opacity-100">Mengisi formulir biodata lengkap dan mengunggah dokumen persyaratan secara digital.</p>
+                        </div>
+                    </div>
+                    <!-- Right Timeline -->
+                    <div class="mb-8 flex justify-between items-center w-full right-timeline" data-aos="fade-right">
+                        <div class="order-1 w-5/12"></div>
+                        <div class="z-20 flex items-center order-1 bg-primary-green shadow-xl w-12 h-12 rounded-full">
+                            <h1 class="mx-auto font-semibold text-lg text-white">3</h1>
+                        </div>
+                        <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
+                            <h3 class="font-bold text-gray-800 text-xl">Verifikasi & Pembayaran</h3>
+                            <p class="text-sm leading-snug tracking-wide text-gray-600 text-opacity-100">Sistem secara otomatis memeriksa kelengkapan. Untuk paket khusus, admin akan verifikasi dokumen sebelum pembayaran dapat dilakukan.</p>
+                        </div>
+                    </div>
+                     <!-- Left Timeline -->
+                    <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline" data-aos="fade-left">
+                        <div class="order-1 w-5/12"></div>
+                        <div class="z-20 flex items-center order-1 bg-primary-green shadow-xl w-12 h-12 rounded-full">
+                            <h1 class="mx-auto text-white font-semibold text-lg">4</h1>
+                        </div>
+                        <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
+                            <h3 class="font-bold text-gray-800 text-xl">Pengumuman Kelulusan</h3>
+                            <p class="text-sm leading-snug tracking-wide text-gray-600 text-opacity-100">Admin melakukan seleksi final dan mengumumkan kelulusan yang dapat diakses langsung dari dashboard santri.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Teknologi -->
+        <section id="teknologi" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                 <div data-aos="fade-up">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-2 section-title">Dibangun dengan Teknologi Terkini</h2>
+                    <p class="text-slate-600 mb-12">Menggunakan fondasi yang kuat dan modern untuk performa dan keamanan terbaik.</p>
+                 </div>
+                 <div class="flex flex-wrap justify-center items-center gap-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center p-4 bg-slate-100 rounded-lg">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg" alt="Laravel" class="h-10">
+                        <span class="ml-4 text-lg font-semibold">Laravel 11</span>
+                    </div>
+                    <div class="flex items-center p-4 bg-slate-100 rounded-lg">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Tailwind_CSS_logo.svg" alt="Tailwind CSS" class="h-8">
+                        <span class="ml-4 text-lg font-semibold">Tailwind CSS</span>
+                    </div>
+                     <div class="flex items-center p-4 bg-slate-100 rounded-lg">
+                        <img src="https://vitejs.dev/logo.svg" alt="Vite" class="h-10">
+                        <span class="ml-4 text-lg font-semibold">Vite.js</span>
+                    </div>
+                    <div class="flex items-center p-4 bg-slate-100 rounded-lg">
+                        <img src="https://raw.githubusercontent.com/xendit/xendit-logo/master/xendit-logo.svg" alt="Xendit" class="h-10">
+                        <span class="ml-4 text-lg font-semibold">Xendit</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 SantriFlow. Dibuat dengan ❤️ untuk efisiensi pendidikan.</p>
+            <p class="mt-2 text-sm">Kontak Developer: <a href="mailto:name.rezananda@gmail.com" class="underline">name.rezananda@gmail.com</a> | <a href="mailto:stevcomp58@gmail.com" class="underline">stevcomp58@gmail.com</a></p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
+
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+</html>
