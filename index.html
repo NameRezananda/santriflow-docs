@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,40 +16,58 @@
         html {
             scroll-behavior: smooth;
         }
+
         body {
             font-family: 'Poppins', sans-serif;
         }
+
         .hero-bg {
-            background-color: #f0fdf4; /* green-50 */
+            background-color: #f0fdf4;
+            /* green-50 */
         }
+
         .primary-green {
-            color: #0f3135; /* green-600 */
+            color: #0f3135;
+            /* green-600 */
         }
+
         .bg-primary-green {
-            background-color: #0f3135; /* green-600 */
+            background-color: #0f3135;
+            /* green-600 */
         }
+
         .bg-primary-green-hover:hover {
-            background-color: #17474d; /* green-700 */
+            background-color: #17474d;
+            /* green-700 */
         }
+
         .section-title {
             border-left: 4px solid #0f3135;
             padding-left: 1rem;
         }
-        [x-cloak] { display: none !important; }
+
+        [x-cloak] {
+            display: none !important;
+        }
 
         /* Swiper Customization */
-        .swiper-button-next, .swiper-button-prev {
+        .swiper-button-next,
+        .swiper-button-prev {
             color: #0f3135 !important;
             transition: transform 0.2s;
         }
-        .swiper-button-next:hover, .swiper-button-prev:hover {
+
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
             transform: scale(1.1);
         }
+
         .swiper-pagination-bullet-active {
             background-color: #0f3135 !important;
         }
     </style>
 </head>
+
 <body class="bg-slate-50 text-slate-800">
 
     <!-- Header -->
@@ -63,25 +82,37 @@
                 <a href="#fitur" class="text-slate-600 hover:primary-green transition-colors">Fitur Unggulan</a>
                 <a href="#alur" class="text-slate-600 hover:primary-green transition-colors">Alur Pendaftaran</a>
                 <a href="#teknologi" class="text-slate-600 hover:primary-green transition-colors">Teknologi</a>
+                <a href="#dokumen" class="text-slate-600 hover:primary-green transition-colors">Dokumen</a>
             </nav>
-            <a href="#" class="bg-primary-green text-white font-semibold px-4 py-2 rounded-lg shadow-md bg-primary-green-hover transition-colors hidden md:block">Hubungi Kami</a>
+            <a href="#"
+                class="bg-primary-green text-white font-semibold px-4 py-2 rounded-lg shadow-md bg-primary-green-hover transition-colors hidden md:block">Hubungi
+                Kami</a>
 
             <!-- Mobile Hamburger Button -->
             <div class="md:hidden">
                 <button @click="open = !open" class="text-slate-800 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
                     </svg>
                 </button>
             </div>
         </div>
         <!-- Mobile Nav -->
         <div x-show="open" x-cloak @click.away="open = false" class="md:hidden bg-white border-t">
-            <a href="#fitur" @click="open = false" class="block px-6 py-3 text-slate-600 hover:bg-slate-100">Fitur Unggulan</a>
-            <a href="#alur" @click="open = false" class="block px-6 py-3 text-slate-600 hover:bg-slate-100">Alur Pendaftaran</a>
-            <a href="#teknologi" @click="open = false" class="block px-6 py-3 text-slate-600 hover:bg-slate-100">Teknologi</a>
+            <a href="#fitur" @click="open = false" class="block px-6 py-3 text-slate-600 hover:bg-slate-100">Fitur
+                Unggulan</a>
+            <a href="#alur" @click="open = false" class="block px-6 py-3 text-slate-600 hover:bg-slate-100">Alur
+                Pendaftaran</a>
+            <a href="#teknologi" @click="open = false"
+                class="block px-6 py-3 text-slate-600 hover:bg-slate-100">Teknologi</a>
+            <a href="#dokumen" @click="open = false"
+                class="block px-6 py-3 text-slate-600 hover:bg-slate-100">Dokumen</a>
             <div class="px-6 py-4">
-                 <a href="#" class="bg-primary-green text-white font-semibold px-4 py-2 rounded-lg shadow-md bg-primary-green-hover transition-colors w-full block text-center">Hubungi Kami</a>
+                <a href="#"
+                    class="bg-primary-green text-white font-semibold px-4 py-2 rounded-lg shadow-md bg-primary-green-hover transition-colors w-full block text-center">Hubungi
+                    Kami</a>
             </div>
         </div>
     </header>
@@ -94,17 +125,22 @@
                     Sistem PPDB Modern untuk Pesantren & Sekolah
                 </h1>
                 <p data-aos="fade-up" data-aos-delay="200" class="text-lg text-slate-600 max-w-3xl mx-auto mb-8">
-                    SantriFlow adalah solusi lengkap untuk digitalisasi proses Penerimaan Peserta Didik Baru (PPDB), mulai dari pendaftaran hingga pengumuman kelulusan, dirancang untuk efisiensi dan kemudahan.
+                    SantriFlow adalah solusi lengkap untuk digitalisasi proses Penerimaan Peserta Didik Baru (PPDB),
+                    mulai dari pendaftaran hingga pengumuman kelulusan, dirancang untuk efisiensi dan kemudahan.
                 </p>
                 <div data-aos="fade-up" data-aos-delay="400" class="max-w-4xl mx-auto">
                     <!-- Swiper -->
                     <div class="swiper-container rounded-lg shadow-2xl border-4 border-white bg-slate-200">
                         <div class="swiper-wrapper">
                             <!-- Slides -->
-                            <div class="swiper-slide"><img src="assets/images/slider-dashboard.png" alt="Screenshot Dasbor Santri" class="w-full h-full object-cover"></div>
-                            <div class="swiper-slide"><img src="assets/images/slider-upload.svg" alt="Screenshot Halaman Upload Dokumen" class="w-full h-full object-cover"></div>
-                            <div class="swiper-slide"><img src="assets/images/slider-payment.svg" alt="Screenshot Halaman Pembayaran" class="w-full h-full object-cover"></div>
-                            <div class="swiper-slide"><img src="assets/images/slider-admin.png" alt="Screenshot Panel Admin" class="w-full h-full object-cover"></div>
+                            <div class="swiper-slide"><img src="assets/images/slider-dashboard.png"
+                                    alt="Screenshot Dasbor Santri" class="w-full h-full object-cover"></div>
+                            <div class="swiper-slide"><img src="assets/images/slider-upload.svg"
+                                    alt="Screenshot Halaman Upload Dokumen" class="w-full h-full object-cover"></div>
+                            <div class="swiper-slide"><img src="assets/images/slider-payment.svg"
+                                    alt="Screenshot Halaman Pembayaran" class="w-full h-full object-cover"></div>
+                            <div class="swiper-slide"><img src="assets/images/slider-admin.png"
+                                    alt="Screenshot Panel Admin" class="w-full h-full object-cover"></div>
                         </div>
                         <!-- Add Pagination -->
                         <div class="swiper-pagination"></div>
@@ -121,56 +157,100 @@
             <div class="container mx-auto px-6">
                 <div data-aos="fade-right">
                     <h2 class="text-3xl font-bold text-slate-900 mb-2 section-title">Fitur Unggulan</h2>
-                    <p class="text-slate-600 mb-12">Semua yang Anda butuhkan untuk manajemen pendaftaran yang efektif.</p>
+                    <p class="text-slate-600 mb-12">Semua yang Anda butuhkan untuk manajemen pendaftaran yang efektif.
+                    </p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    
-                    <div data-aos="fade-up" data-aos-delay="0" class="bg-slate-50 p-6 rounded-lg border border-slate-200 hover:shadow-lg hover:-translate-y-1 transition-all">
+
+                    <div data-aos="fade-up" data-aos-delay="0"
+                        class="bg-slate-50 p-6 rounded-lg border border-slate-200 hover:shadow-lg hover:-translate-y-1 transition-all">
                         <div class="flex items-center mb-4">
-                            <svg class="w-8 h-8 primary-green mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                            <svg class="w-8 h-8 primary-green mr-4" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z">
+                                </path>
+                            </svg>
                             <h3 class="text-xl font-semibold text-slate-800">Pendaftaran Online 24/7</h3>
                         </div>
-                        <p class="text-slate-600">Calon santri dapat mendaftar kapan saja dan di mana saja, memberikan fleksibilitas maksimal.</p>
+                        <p class="text-slate-600">Calon santri dapat mendaftar kapan saja dan di mana saja, memberikan
+                            fleksibilitas maksimal.</p>
                     </div>
 
-                    <div data-aos="fade-up" data-aos-delay="100" class="bg-slate-50 p-6 rounded-lg border border-slate-200 hover:shadow-lg hover:-translate-y-1 transition-all">
+                    <div data-aos="fade-up" data-aos-delay="100"
+                        class="bg-slate-50 p-6 rounded-lg border border-slate-200 hover:shadow-lg hover:-translate-y-1 transition-all">
                         <div class="flex items-center mb-4">
-                            <svg class="w-8 h-8 primary-green mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
+                            <svg class="w-8 h-8 primary-green mr-4" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path>
+                            </svg>
                             <h3 class="text-xl font-semibold text-slate-800">Upload Dokumen Digital</h3>
                         </div>
-                        <p class="text-slate-600">Menggantikan berkas fisik dengan sistem upload yang mudah dan terorganisir.</p>
+                        <p class="text-slate-600">Menggantikan berkas fisik dengan sistem upload yang mudah dan
+                            terorganisir.</p>
                     </div>
 
-                    <div data-aos="fade-up" data-aos-delay="200" class="bg-slate-50 p-6 rounded-lg border border-slate-200 hover:shadow-lg hover:-translate-y-1 transition-all">
+                    <div data-aos="fade-up" data-aos-delay="200"
+                        class="bg-slate-50 p-6 rounded-lg border border-slate-200 hover:shadow-lg hover:-translate-y-1 transition-all">
                         <div class="flex items-center mb-4">
-                             <svg class="w-8 h-8 primary-green mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+                            <svg class="w-8 h-8 primary-green mr-4" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z">
+                                </path>
+                            </svg>
                             <h3 class="text-xl font-semibold text-slate-800">Pembayaran Multi-Metode</h3>
                         </div>
-                        <p class="text-slate-600">Integrasi dengan payment gateway (Xendit) dan opsi transfer bank manual untuk kemudahan transaksi.</p>
+                        <p class="text-slate-600">Integrasi dengan payment gateway (Xendit) dan opsi transfer bank
+                            manual untuk kemudahan transaksi.</p>
                     </div>
 
-                    <div data-aos="fade-up" data-aos-delay="0" class="bg-slate-50 p-6 rounded-lg border border-slate-200 hover:shadow-lg hover:-translate-y-1 transition-all">
+                    <div data-aos="fade-up" data-aos-delay="0"
+                        class="bg-slate-50 p-6 rounded-lg border border-slate-200 hover:shadow-lg hover:-translate-y-1 transition-all">
                         <div class="flex items-center mb-4">
-                           <svg class="w-8 h-8 primary-green mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+                            <svg class="w-8 h-8 primary-green mr-4" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9">
+                                </path>
+                            </svg>
                             <h3 class="text-xl font-semibold text-slate-800">Notifikasi WhatsApp Otomatis</h3>
                         </div>
-                        <p class="text-slate-600">Informasi penting seperti status pembayaran dan kelulusan dikirim langsung ke WhatsApp wali santri.</p>
+                        <p class="text-slate-600">Informasi penting seperti status pembayaran dan kelulusan dikirim
+                            langsung ke WhatsApp wali santri.</p>
                     </div>
 
-                    <div data-aos="fade-up" data-aos-delay="100" class="bg-slate-50 p-6 rounded-lg border border-slate-200 hover:shadow-lg hover:-translate-y-1 transition-all">
+                    <div data-aos="fade-up" data-aos-delay="100"
+                        class="bg-slate-50 p-6 rounded-lg border border-slate-200 hover:shadow-lg hover:-translate-y-1 transition-all">
                         <div class="flex items-center mb-4">
-                           <svg class="w-8 h-8 primary-green mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            <svg class="w-8 h-8 primary-green mr-4" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                </path>
+                            </svg>
                             <h3 class="text-xl font-semibold text-slate-800">Dashboard Admin Komprehensif</h3>
                         </div>
-                        <p class="text-slate-600">Panel admin yang intuitif untuk memantau pendaftar, verifikasi data, dan mengelola kuota.</p>
+                        <p class="text-slate-600">Panel admin yang intuitif untuk memantau pendaftar, verifikasi data,
+                            dan mengelola kuota.</p>
                     </div>
 
-                    <div data-aos="fade-up" data-aos-delay="200" class="bg-slate-50 p-6 rounded-lg border border-slate-200 hover:shadow-lg hover:-translate-y-1 transition-all">
+                    <div data-aos="fade-up" data-aos-delay="200"
+                        class="bg-slate-50 p-6 rounded-lg border border-slate-200 hover:shadow-lg hover:-translate-y-1 transition-all">
                         <div class="flex items-center mb-4">
-                            <svg class="w-8 h-8 primary-green mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            <svg class="w-8 h-8 primary-green mr-4" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
                             <h3 class="text-xl font-semibold text-slate-800">Paket Pendaftaran Dinamis</h3>
                         </div>
-                        <p class="text-slate-600">Admin dapat menentukan syarat dokumen dan alur verifikasi yang berbeda untuk setiap paket pendaftaran.</p>
+                        <p class="text-slate-600">Admin dapat menentukan syarat dokumen dan alur verifikasi yang berbeda
+                            untuk setiap paket pendaftaran.</p>
                     </div>
 
                 </div>
@@ -182,10 +262,12 @@
             <div class="container mx-auto px-6">
                 <div data-aos="fade-left">
                     <h2 class="text-3xl font-bold text-slate-900 mb-2 section-title">Alur Pendaftaran yang Jelas</h2>
-                    <p class="text-slate-600 mb-12 text-center max-w-2xl mx-auto">Dari pembuatan akun hingga pengumuman kelulusan, semua proses terdokumentasi dengan baik dan mudah diikuti oleh calon santri.</p>
+                    <p class="text-slate-600 mb-12 text-center max-w-2xl mx-auto">Dari pembuatan akun hingga pengumuman
+                        kelulusan, semua proses terdokumentasi dengan baik dan mudah diikuti oleh calon santri.</p>
                 </div>
                 <div class="relative wrap overflow-hidden p-10 h-full">
-                    <div class="border-2-2 absolute border-opacity-20 border-slate-700 h-full border" style="left: 50%"></div>
+                    <div class="border-2-2 absolute border-opacity-20 border-slate-700 h-full border" style="left: 50%">
+                    </div>
                     <!-- Right Timeline -->
                     <div class="mb-8 flex justify-between items-center w-full right-timeline" data-aos="fade-right">
                         <div class="order-1 w-5/12"></div>
@@ -194,18 +276,21 @@
                         </div>
                         <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
                             <h3 class="font-bold text-gray-800 text-xl">Buat Akun & Login</h3>
-                            <p class="text-sm leading-snug tracking-wide text-gray-600 text-opacity-100">Calon santri membuat akun dengan email dan No. HP, kemudian login ke dashboard.</p>
+                            <p class="text-sm leading-snug tracking-wide text-gray-600 text-opacity-100">Calon santri
+                                membuat akun dengan email dan No. HP, kemudian login ke dashboard.</p>
                         </div>
                     </div>
                     <!-- Left Timeline -->
-                    <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline" data-aos="fade-left">
+                    <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
+                        data-aos="fade-left">
                         <div class="order-1 w-5/12"></div>
                         <div class="z-20 flex items-center order-1 bg-primary-green shadow-xl w-12 h-12 rounded-full">
                             <h1 class="mx-auto text-white font-semibold text-lg">2</h1>
                         </div>
                         <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
                             <h3 class="font-bold text-gray-800 text-xl">Isi Biodata & Dokumen</h3>
-                            <p class="text-sm leading-snug tracking-wide text-gray-600 text-opacity-100">Mengisi formulir biodata lengkap dan mengunggah dokumen persyaratan secara digital.</p>
+                            <p class="text-sm leading-snug tracking-wide text-gray-600 text-opacity-100">Mengisi
+                                formulir biodata lengkap dan mengunggah dokumen persyaratan secara digital.</p>
                         </div>
                     </div>
                     <!-- Right Timeline -->
@@ -216,32 +301,39 @@
                         </div>
                         <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
                             <h3 class="font-bold text-gray-800 text-xl">Verifikasi & Pembayaran</h3>
-                            <p class="text-sm leading-snug tracking-wide text-gray-600 text-opacity-100">Sistem secara otomatis memeriksa kelengkapan. Untuk paket khusus, admin akan verifikasi dokumen sebelum pembayaran dapat dilakukan.</p>
+                            <p class="text-sm leading-snug tracking-wide text-gray-600 text-opacity-100">Sistem secara
+                                otomatis memeriksa kelengkapan. Untuk paket khusus, admin akan verifikasi dokumen
+                                sebelum pembayaran dapat dilakukan.</p>
                         </div>
                     </div>
-                     <!-- Left Timeline -->
-                    <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline" data-aos="fade-left">
+                    <!-- Left Timeline -->
+                    <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
+                        data-aos="fade-left">
                         <div class="order-1 w-5/12"></div>
                         <div class="z-20 flex items-center order-1 bg-primary-green shadow-xl w-12 h-12 rounded-full">
                             <h1 class="mx-auto text-white font-semibold text-lg">4</h1>
                         </div>
                         <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
                             <h3 class="font-bold text-gray-800 text-xl">Pengumuman Kelulusan</h3>
-                            <p class="text-sm leading-snug tracking-wide text-gray-600 text-opacity-100">Admin melakukan seleksi final dan mengumumkan kelulusan yang dapat diakses langsung dari dashboard santri.</p>
+                            <p class="text-sm leading-snug tracking-wide text-gray-600 text-opacity-100">Admin melakukan
+                                seleksi final dan mengumumkan kelulusan yang dapat diakses langsung dari dashboard
+                                santri.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-         <!-- Teknologi -->
+        <!-- Teknologi -->
         <section id="teknologi" class="py-20 bg-white">
             <div class="container mx-auto px-6">
-                 <div data-aos="fade-up">
-                    <h2 class="text-3xl font-bold text-slate-900 mb-2 section-title">Dibangun dengan Teknologi Terkini</h2>
-                    <p class="text-slate-600 mb-12">Menggunakan fondasi yang kuat dan modern untuk performa dan keamanan terbaik.</p>
-                 </div>
-                 <div class="flex flex-wrap justify-center items-center gap-8" data-aos="fade-up" data-aos-delay="200">
+                <div data-aos="fade-up">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-2 section-title">Dibangun dengan Teknologi Terkini
+                    </h2>
+                    <p class="text-slate-600 mb-12">Menggunakan fondasi yang kuat dan modern untuk performa dan keamanan
+                        terbaik.</p>
+                </div>
+                <div class="flex flex-wrap justify-center items-center gap-8" data-aos="fade-up" data-aos-delay="200">
                     <div class="flex items-center p-4 bg-slate-100 rounded-lg">
                         <img src="assets/images/laravel.svg" alt="Laravel" class="h-10">
                         <span class="ml-4 text-lg font-semibold">Laravel 11</span>
@@ -250,7 +342,7 @@
                         <img src="assets/images/tailwind.svg" alt="Tailwind CSS" class="h-8">
                         <span class="ml-4 text-lg font-semibold">Tailwind CSS</span>
                     </div>
-                     <div class="flex items-center p-4 bg-slate-100 rounded-lg">
+                    <div class="flex items-center p-4 bg-slate-100 rounded-lg">
                         <img src="assets/images/vite.svg" alt="Vite" class="h-10">
                         <span class="ml-4 text-lg font-semibold">Vite.js</span>
                     </div>
@@ -263,11 +355,211 @@
         </section>
     </main>
 
+    <!-- Dokumen & Diagram -->
+    <section id="dokumen" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-slate-900 mb-2 section-title">Dokumentasi & Diagram</h2>
+                <p class="text-slate-600 mb-12">Arsip dokumen proyek, video promosi, dan diagram alur sistem.</p>
+            </div>
+
+            <!-- Dokumen Section -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold text-slate-800 mb-6 flex items-center">
+                    <svg class="w-6 h-6 mr-2 primary-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                        </path>
+                    </svg>
+                    Dokumen & Media
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Laporan -->
+                    <div data-aos="fade-up" data-aos-delay="0"
+                        class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                        <div class="flex flex-col h-full justify-between">
+                            <div>
+                                <div
+                                    class="bg-red-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-red-600">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <h4 class="text-lg font-semibold text-slate-800 mb-2">Laporan Capstone Project</h4>
+                                <p class="text-sm text-slate-500 mb-4">Dokumentasi lengkap mengenai pengembangan sistem
+                                    SantriFlow.</p>
+                            </div>
+                            <a href="assets/dokumen/Laporan_CapstoneProject_SantriFlow (2).pdf" target="_blank"
+                                class="text-primary-green hover:underline font-medium inline-flex items-center">
+                                Download PDF
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4-4m0 0L8 8m4-4v12"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Poster -->
+                    <div data-aos="fade-up" data-aos-delay="100"
+                        class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                        <div class="flex flex-col h-full justify-between">
+                            <div>
+                                <div
+                                    class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-blue-600">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <h4 class="text-lg font-semibold text-slate-800 mb-2">Poster Publikasi</h4>
+                                <p class="text-sm text-slate-500 mb-4">Poster A3 yang menjelaskan ringkasan dan fitur
+                                    utama sistem.</p>
+                            </div>
+                            <a href="assets/dokumen/Poster Santriflow A3.pdf" target="_blank"
+                                class="text-primary-green hover:underline font-medium inline-flex items-center">
+                                Lihat Poster
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Video -->
+                    <div data-aos="fade-up" data-aos-delay="200"
+                        class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                        <div class="flex flex-col h-full justify-between">
+                            <div>
+                                <div
+                                    class="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-purple-600">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z">
+                                        </path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <h4 class="text-lg font-semibold text-slate-800 mb-2">Video Promosi</h4>
+                                <p class="text-sm text-slate-500 mb-4">Video singkat pengenalan fitur dan keunggulan
+                                    SantriFlow.</p>
+                            </div>
+                            <a href="assets/dokumen/Promosi SantriFlow.mp4" target="_blank"
+                                class="text-primary-green hover:underline font-medium inline-flex items-center">
+                                Putar Video
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Diagram Section -->
+            <div>
+                <h3 class="text-2xl font-semibold text-slate-800 mb-6 flex items-center">
+                    <svg class="w-6 h-6 mr-2 primary-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z">
+                        </path>
+                    </svg>
+                    Diagram Sistem
+                </h3>
+                <!-- Container untuk Diagram -->
+                <div id="diagram-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                    x-data="diagramsApp()" x-init="init()">
+
+                    <!-- Item Diagram (Looping) -->
+                    <template x-for="diagram in diagrams" :key="diagram.file">
+                        <div data-aos="fade-up"
+                            class="bg-white p-4 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-all group cursor-pointer"
+                            @click="openModal(diagram)">
+                            <div class="aspect-video bg-slate-100 rounded-lg overflow-hidden mb-4 relative">
+                                <img :src="'assets/diagram/' + diagram.file" :alt="diagram.title"
+                                    class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+                                    <svg class="w-10 h-10 text-white drop-shadow-lg" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <h4 class="text-lg font-semibold text-slate-800" x-text="diagram.title"></h4>
+                            <p class="text-sm text-slate-500" x-text="diagram.desc"></p>
+                        </div>
+                    </template>
+
+                    <!-- Empty State -->
+                    <div x-show="diagrams.length === 0"
+                        class="col-span-full bg-slate-100 border-2 border-dashed border-slate-300 rounded-xl p-12 text-center">
+                        <svg class="w-16 h-16 text-slate-400 mx-auto mb-4" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                        <h4 class="text-xl font-medium text-slate-600 mb-2">Belum ada diagram yang diunggah</h4>
+                        <p class="text-slate-500">Tambahkan file ke folder assets/diagram dan update konfigurasi script.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Modal Lightbox -->
+                <div x-show="modalOpen" style="display: none;"
+                    class="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-black bg-opacity-90 transition-opacity"
+                    x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0"
+                    x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-200"
+                    x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" @click.self="closeModal"
+                    @keydown.escape.window="closeModal">
+
+                    <div class="relative max-w-5xl w-full max-h-screen flex flex-col items-center">
+                        <button @click="closeModal"
+                            class="absolute -top-12 right-0 text-white hover:text-gray-300 focus:outline-none">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                        <img :src="activeDiagram ? 'assets/diagram/' + activeDiagram.file : ''"
+                            class="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl" alt="Diagram View">
+                        <div class="mt-4 text-center">
+                            <h3 class="text-xl font-bold text-white" x-text="activeDiagram ? activeDiagram.title : ''">
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    </main>
+
     <!-- Footer -->
     <footer class="bg-slate-800 text-white py-8">
         <div class="container mx-auto px-6 text-center">
             <p>&copy; 2025 SantriFlow. Dibuat dengan ❤️ untuk efisiensi pendidikan.</p>
-            <p class="mt-2 text-sm">Kontak Developer: <a href="mailto:name.rezananda@gmail.com" class="underline">name.rezananda@gmail.com</a> | <a href="mailto:stevcomp58@gmail.com" class="underline">stevcomp58@gmail.com</a></p>
+            <p class="mt-2 text-sm">Kontak Developer: <a href="mailto:name.rezananda@gmail.com"
+                    class="underline">name.rezananda@gmail.com</a> | <a href="mailto:stevcomp58@gmail.com"
+                    class="underline">stevcomp58@gmail.com</a></p>
         </div>
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -293,6 +585,39 @@
                 prevEl: '.swiper-button-prev',
             },
         });
+
+        function diagramsApp() {
+            return {
+                diagrams: [
+                    // // Daftar File Diagram (Update manual di sini)
+                    // {
+                    //     file: 'Flowchart_JawabanSoal3.png',
+                    //     title: 'Flowchart Proses',
+                    //     desc: 'Diagram alur proses jawaban soal 3'
+                    // },
+                    // Tambahkan file lain di sini...
+                ],
+                modalOpen: false,
+                activeDiagram: null,
+
+                init() {
+                    // console.log('Diagrams loaded:', this.diagrams.length);
+                },
+
+                openModal(diagram) {
+                    this.activeDiagram = diagram;
+                    this.modalOpen = true;
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling
+                },
+
+                closeModal() {
+                    this.modalOpen = false;
+                    this.activeDiagram = null;
+                    document.body.style.overflow = 'auto'; // Restore scrolling
+                }
+            }
+        }
     </script>
 </body>
+
 </html>
