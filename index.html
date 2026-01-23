@@ -119,18 +119,19 @@
 
     <!-- Hero Section -->
     <main>
-        <section class="hero-bg py-20 overflow-hidden">
+        <section class="hero-bg py-10 md:py-20 overflow-hidden">
             <div class="container mx-auto px-6 text-center">
-                <h1 data-aos="fade-up" class="text-4xl md:text-5xl font-bold text-slate-900 mb-4 leading-tight">
+                <h1 data-aos="fade-up" class="text-3xl md:text-5xl font-bold text-slate-900 mb-4 leading-tight">
                     Sistem PPDB Modern untuk Pesantren & Sekolah
                 </h1>
-                <p data-aos="fade-up" data-aos-delay="200" class="text-lg text-slate-600 max-w-3xl mx-auto mb-8">
+                <p data-aos="fade-up" data-aos-delay="200"
+                    class="text-base md:text-lg text-slate-600 max-w-3xl mx-auto mb-8">
                     SantriFlow adalah solusi lengkap untuk digitalisasi proses Penerimaan Peserta Didik Baru (PPDB),
                     mulai dari pendaftaran hingga pengumuman kelulusan, dirancang untuk efisiensi dan kemudahan.
                 </p>
                 <div data-aos="fade-up" data-aos-delay="400" class="max-w-4xl mx-auto">
                     <!-- Swiper -->
-                    <div class="swiper-container rounded-lg shadow-2xl border-4 border-white bg-slate-200">
+                    <div class="swiper-container rounded-lg shadow-2xl border-4 border-white bg-slate-200 aspect-video">
                         <div class="swiper-wrapper">
                             <!-- Slides -->
                             <div class="swiper-slide"><img src="assets/images/slider-dashboard.png"
@@ -145,22 +146,24 @@
                         <!-- Add Pagination -->
                         <div class="swiper-pagination"></div>
                         <!-- Add Navigation -->
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev hidden md:flex"></div>
+                        <div class="swiper-button-next hidden md:flex"></div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Fitur Unggulan -->
-        <section id="fitur" class="py-20 bg-white">
+        <section id="fitur" class="py-10 md:py-20 bg-white">
             <div class="container mx-auto px-6">
                 <div data-aos="fade-right">
-                    <h2 class="text-3xl font-bold text-slate-900 mb-2 section-title">Fitur Unggulan</h2>
-                    <p class="text-slate-600 mb-12">Semua yang Anda butuhkan untuk manajemen pendaftaran yang efektif.
+                    <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-2 section-title">Fitur Unggulan</h2>
+                    <p class="text-slate-600 mb-8 md:mb-12">Semua yang Anda butuhkan untuk manajemen pendaftaran yang
+                        efektif.
                     </p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Grid content remains same -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
 
                     <div data-aos="fade-up" data-aos-delay="0"
                         class="bg-slate-50 p-6 rounded-lg border border-slate-200 hover:shadow-lg hover:-translate-y-1 transition-all">
@@ -258,63 +261,72 @@
         </section>
 
         <!-- Alur Pendaftaran -->
-        <section id="alur" class="py-20 hero-bg">
+        <section id="alur" class="py-10 md:py-20 hero-bg">
             <div class="container mx-auto px-6">
                 <div data-aos="fade-left">
-                    <h2 class="text-3xl font-bold text-slate-900 mb-2 section-title">Alur Pendaftaran yang Jelas</h2>
-                    <p class="text-slate-600 mb-12 text-center max-w-2xl mx-auto">Dari pembuatan akun hingga pengumuman
+                    <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-2 section-title">Alur Pendaftaran yang
+                        Jelas</h2>
+                    <p class="text-slate-600 mb-8 md:mb-12 text-center max-w-2xl mx-auto">Dari pembuatan akun hingga
+                        pengumuman
                         kelulusan, semua proses terdokumentasi dengan baik dan mudah diikuti oleh calon santri.</p>
                 </div>
-                <div class="relative wrap overflow-hidden p-10 h-full">
-                    <div class="border-2-2 absolute border-opacity-20 border-slate-700 h-full border" style="left: 50%">
+                <div class="relative wrap overflow-hidden p-0 md:p-10 h-full">
+                    <div class="border-2-2 absolute border-opacity-20 border-slate-700 h-full border hidden md:block"
+                        style="left: 50%">
                     </div>
                     <!-- Right Timeline -->
-                    <div class="mb-8 flex justify-between items-center w-full right-timeline" data-aos="fade-right">
-                        <div class="order-1 w-5/12"></div>
-                        <div class="z-20 flex items-center order-1 bg-primary-green shadow-xl w-12 h-12 rounded-full">
+                    <div class="mb-8 flex flex-col md:flex-row justify-between items-center w-full right-timeline"
+                        data-aos="fade-right">
+                        <div class="order-1 w-full md:w-5/12"></div>
+                        <div
+                            class="z-20 flex items-center justify-center order-1 bg-primary-green shadow-xl w-10 h-10 md:w-12 md:h-12 rounded-full mb-4 md:mb-0">
                             <h1 class="mx-auto font-semibold text-lg text-white">1</h1>
                         </div>
-                        <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
-                            <h3 class="font-bold text-gray-800 text-xl">Buat Akun & Login</h3>
+                        <div class="order-1 bg-white rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4">
+                            <h3 class="font-bold text-gray-800 text-lg md:text-xl">Buat Akun & Login</h3>
                             <p class="text-sm leading-snug tracking-wide text-gray-600 text-opacity-100">Calon santri
                                 membuat akun dengan email dan No. HP, kemudian login ke dashboard.</p>
                         </div>
                     </div>
                     <!-- Left Timeline -->
-                    <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
+                    <div class="mb-8 flex flex-col md:flex-row-reverse justify-between items-center w-full left-timeline"
                         data-aos="fade-left">
-                        <div class="order-1 w-5/12"></div>
-                        <div class="z-20 flex items-center order-1 bg-primary-green shadow-xl w-12 h-12 rounded-full">
+                        <div class="order-1 w-full md:w-5/12"></div>
+                        <div
+                            class="z-20 flex items-center justify-center order-1 bg-primary-green shadow-xl w-10 h-10 md:w-12 md:h-12 rounded-full mb-4 md:mb-0">
                             <h1 class="mx-auto text-white font-semibold text-lg">2</h1>
                         </div>
-                        <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
-                            <h3 class="font-bold text-gray-800 text-xl">Isi Biodata & Dokumen</h3>
+                        <div class="order-1 bg-white rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4">
+                            <h3 class="font-bold text-gray-800 text-lg md:text-xl">Isi Biodata & Dokumen</h3>
                             <p class="text-sm leading-snug tracking-wide text-gray-600 text-opacity-100">Mengisi
                                 formulir biodata lengkap dan mengunggah dokumen persyaratan secara digital.</p>
                         </div>
                     </div>
                     <!-- Right Timeline -->
-                    <div class="mb-8 flex justify-between items-center w-full right-timeline" data-aos="fade-right">
-                        <div class="order-1 w-5/12"></div>
-                        <div class="z-20 flex items-center order-1 bg-primary-green shadow-xl w-12 h-12 rounded-full">
+                    <div class="mb-8 flex flex-col md:flex-row justify-between items-center w-full right-timeline"
+                        data-aos="fade-right">
+                        <div class="order-1 w-full md:w-5/12"></div>
+                        <div
+                            class="z-20 flex items-center justify-center order-1 bg-primary-green shadow-xl w-10 h-10 md:w-12 md:h-12 rounded-full mb-4 md:mb-0">
                             <h1 class="mx-auto font-semibold text-lg text-white">3</h1>
                         </div>
-                        <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
-                            <h3 class="font-bold text-gray-800 text-xl">Verifikasi & Pembayaran</h3>
+                        <div class="order-1 bg-white rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4">
+                            <h3 class="font-bold text-gray-800 text-lg md:text-xl">Verifikasi & Pembayaran</h3>
                             <p class="text-sm leading-snug tracking-wide text-gray-600 text-opacity-100">Sistem secara
                                 otomatis memeriksa kelengkapan. Untuk paket khusus, admin akan verifikasi dokumen
                                 sebelum pembayaran dapat dilakukan.</p>
                         </div>
                     </div>
                     <!-- Left Timeline -->
-                    <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
+                    <div class="mb-8 flex flex-col md:flex-row-reverse justify-between items-center w-full left-timeline"
                         data-aos="fade-left">
-                        <div class="order-1 w-5/12"></div>
-                        <div class="z-20 flex items-center order-1 bg-primary-green shadow-xl w-12 h-12 rounded-full">
+                        <div class="order-1 w-full md:w-5/12"></div>
+                        <div
+                            class="z-20 flex items-center justify-center order-1 bg-primary-green shadow-xl w-10 h-10 md:w-12 md:h-12 rounded-full mb-4 md:mb-0">
                             <h1 class="mx-auto text-white font-semibold text-lg">4</h1>
                         </div>
-                        <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
-                            <h3 class="font-bold text-gray-800 text-xl">Pengumuman Kelulusan</h3>
+                        <div class="order-1 bg-white rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4">
+                            <h3 class="font-bold text-gray-800 text-lg md:text-xl">Pengumuman Kelulusan</h3>
                             <p class="text-sm leading-snug tracking-wide text-gray-600 text-opacity-100">Admin melakukan
                                 seleksi final dan mengumumkan kelulusan yang dapat diakses langsung dari dashboard
                                 santri.</p>
@@ -325,30 +337,33 @@
         </section>
 
         <!-- Teknologi -->
-        <section id="teknologi" class="py-20 bg-white">
+        <section id="teknologi" class="py-10 md:py-20 bg-white">
             <div class="container mx-auto px-6">
                 <div data-aos="fade-up">
-                    <h2 class="text-3xl font-bold text-slate-900 mb-2 section-title">Dibangun dengan Teknologi Terkini
+                    <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-2 section-title">Dibangun dengan
+                        Teknologi Terkini
                     </h2>
-                    <p class="text-slate-600 mb-12">Menggunakan fondasi yang kuat dan modern untuk performa dan keamanan
+                    <p class="text-slate-600 mb-8 md:mb-12">Menggunakan fondasi yang kuat dan modern untuk performa dan
+                        keamanan
                         terbaik.</p>
                 </div>
-                <div class="flex flex-wrap justify-center items-center gap-8" data-aos="fade-up" data-aos-delay="200">
-                    <div class="flex items-center p-4 bg-slate-100 rounded-lg">
-                        <img src="assets/images/laravel.svg" alt="Laravel" class="h-10">
-                        <span class="ml-4 text-lg font-semibold">Laravel 11</span>
+                <div class="flex flex-wrap justify-center items-center gap-6 md:gap-8" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <div class="flex items-center p-3 md:p-4 bg-slate-100 rounded-lg">
+                        <img src="assets/images/laravel.svg" alt="Laravel" class="h-8 md:h-10">
+                        <span class="ml-3 md:ml-4 text-base md:text-lg font-semibold">Laravel 11</span>
                     </div>
-                    <div class="flex items-center p-4 bg-slate-100 rounded-lg">
-                        <img src="assets/images/tailwind.svg" alt="Tailwind CSS" class="h-8">
-                        <span class="ml-4 text-lg font-semibold">Tailwind CSS</span>
+                    <div class="flex items-center p-3 md:p-4 bg-slate-100 rounded-lg">
+                        <img src="assets/images/tailwind.svg" alt="Tailwind CSS" class="h-6 md:h-8">
+                        <span class="ml-3 md:ml-4 text-base md:text-lg font-semibold">Tailwind CSS</span>
                     </div>
-                    <div class="flex items-center p-4 bg-slate-100 rounded-lg">
-                        <img src="assets/images/vite.svg" alt="Vite" class="h-10">
-                        <span class="ml-4 text-lg font-semibold">Vite.js</span>
+                    <div class="flex items-center p-3 md:p-4 bg-slate-100 rounded-lg">
+                        <img src="assets/images/vite.svg" alt="Vite" class="h-8 md:h-10">
+                        <span class="ml-3 md:ml-4 text-base md:text-lg font-semibold">Vite.js</span>
                     </div>
-                    <div class="flex items-center p-4 bg-slate-100 rounded-lg">
-                        <img src="assets/images/xendit.svg" alt="Xendit" class="h-10">
-                        <span class="ml-4 text-lg font-semibold">Xendit</span>
+                    <div class="flex items-center p-3 md:p-4 bg-slate-100 rounded-lg">
+                        <img src="assets/images/xendit.svg" alt="Xendit" class="h-8 md:h-10">
+                        <span class="ml-3 md:ml-4 text-base md:text-lg font-semibold">Xendit</span>
                     </div>
                 </div>
             </div>
@@ -356,11 +371,12 @@
     </main>
 
     <!-- Dokumen & Diagram -->
-    <section id="dokumen" class="py-20 bg-slate-50">
+    <section id="dokumen" class="py-10 md:py-20 bg-slate-50">
         <div class="container mx-auto px-6">
             <div data-aos="fade-up">
-                <h2 class="text-3xl font-bold text-slate-900 mb-2 section-title">Dokumentasi & Diagram</h2>
-                <p class="text-slate-600 mb-12">Arsip dokumen proyek, video promosi, dan diagram alur sistem.</p>
+                <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-2 section-title">Dokumentasi & Diagram</h2>
+                <p class="text-slate-600 mb-8 md:mb-12">Arsip dokumen proyek, video promosi, dan diagram alur sistem.
+                </p>
             </div>
 
             <!-- Dokumen Section -->
